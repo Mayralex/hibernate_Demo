@@ -4,7 +4,7 @@ import Model.Book;
 
 import java.sql.*;
 
-import static JDBC.InvoiceStatements.*;
+import static JDBC.Statements.*;
 
 public class DatabaseManager {
 
@@ -55,7 +55,7 @@ public class DatabaseManager {
 
             while (tables.next()) {
                 String table = tables.getString("TABLE_NAME");
-                if (table.toLowerCase().equals(InvoiceStatements.TABLE_NAME)) tableExists = true;
+                if (table.toLowerCase().equals(Statements.TABLE_NAME)) tableExists = true;
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -85,8 +85,8 @@ public class DatabaseManager {
 
             final int affectedRows = insertStatement.executeUpdate();
             if (affectedRows != 1)
-                throw new RuntimeException("\t >>>> Failed to add new invoice item into database <<<<");
-            System.out.println("\t >>>> Added new invoice item to database <<<<");
+                throw new RuntimeException("\t >>>> Failed to add new book into database <<<<");
+            System.out.println("\t >>>> Added new book to database <<<<");
             try (ResultSet generatedKeys = insertStatement.getGeneratedKeys()) {
                 generatedKeys.next();
                 return generatedKeys.getInt(1);

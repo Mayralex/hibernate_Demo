@@ -11,10 +11,10 @@
                       value="jdbc:mariadb://ec2-18-198-210-127.eu-central-1.compute.amazonaws.com:3306/test"/>
             <property name="jakarta.persistence.jdbc.user" value="remoteu"/>
             <property name="jakarta.persistence.jdbc.password" value="password"/>
-            <property name="jakarta.persistence.schema-generation.database.action" value="drop-and-create"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
             <!--property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect"-->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MariaDBDialect"/>
-            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.show_sql" value="true"/>
 
         </properties>
         

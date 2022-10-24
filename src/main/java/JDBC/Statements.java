@@ -1,6 +1,6 @@
 package JDBC;
 
-public class InvoiceStatements {
+public class Statements {
 
     protected static final String TABLE_NAME = "test";
     protected static final String ID = "ID";
